@@ -1,238 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Hexágono</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="icon" href="Icons/score.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Permanent+Marker&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/hexagono_icon.png" alt="Hexágono Logo"> El Hexágono
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <!-- Menú desplegable para "Temporadas" -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Temporadas
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <!-- Redirigir a temporada_1.html -->
+                            <li><a class="dropdown-item temporada-item" href="temporada_1.html">Temporada 1</a></li>
+                            <!-- Redirigir a temporada_2.html (si tienes esa página) -->
+                            <li><a class="dropdown-item temporada-item" href="">Temporada 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#jugadores">Jugadores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pokemones">Pokemones</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>El Hexágono</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
-        <link rel="icon" href="Icons\score.ico">
-    </head>
-    <body>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="images\hexagono_icon.png" alt="Hexágono Logo"> El Hexágono
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#menciones">Menciones Especiales</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#estadisticas">Estadísticas</a>
-                        </li>
-                    </ul>
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Columna izquierda: Imagen y mensaje -->
+            <div class="col-md-6">
+                <img src="images/index_image_hexagono.png" alt="Hexágono" class="img-fluid" style="width: 75%;">
+                <p class="mt-3 texto-imagen"><strong>(Inserte tono de Noah) <br> De truverse champions de los MVP, <br> fenny</strong></p>
+            </div>
+
+            <!-- Columna derecha: Enfrentamientos -->
+            <div class="col-md-6">
+                <h3 class="text-center">Enfrentamientos de la Temporada</h3>
+                <div id="jornadas-container">
+                    <!-- Aquí se insertará la lista de jornadas con JavaScript -->
                 </div>
             </div>
-        </nav>
-
-        <!-- Main Content -->
-        <div class="container">
-            <div class="title">
-                <h1>Menciones Especiales - Final de Temporada 1</h1>
-                <hr>
-            </div>
-
-            <!-- Podio de Mejores Jugadores -->
-            <div class="title">
-                <h1>Podio - Mejores Jugadores</h1>
-                <div class="row mb-4">
-                    <div class="col-12 text-center" style="padding: 20px; background-color: #fff;">
-                        <img src="images\oro.png" alt="Medalla de Oro" class="img-fluid" width="100">
-                        <h3>||Aten||</h3>
-                    </div>
-                </div>
-
-                <div class="row mb-4">
-                    <div class="col-12 text-center" style="padding: 20px; background-color: #fff;">
-                        <img src="images\plata.png" alt="Medalla de Plata" class="img-fluid" width="100">
-                        <h3>Q-ma</h3>
-                    </div>
-                </div>
-
-                <div class="row mb-4">
-                    <div class="col-12 text-center" style="padding: 20px; background-color: #fff;">
-                        <img src="images\bronce.png" alt="Medalla de Bronce" class="img-fluid" width="100">
-                        <h3>Intrinseco._</h3>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Menciones Especiales -->
-            <div class="grid-container" id="menciones">
-    
-        <div class="player">
-            <img src="images\sage.png" alt="El Sage" class="img-fluid">
-            <div class="player-info">
-                <h3>||Aten||</h3>
-                <p><strong>Mención especial:</strong> El Sage</p>
-                <p><strong>Valor de la métrica:</strong> 14.146341463414634</p>
-            </div>
         </div>
-        
-        <div class="player">
-            <img src="images\anotauro.png" alt="El Anotauro" class="img-fluid">
-            <div class="player-info">
-                <h3>Nicky2712</h3>
-                <p><strong>Mención especial:</strong> El Anotauro</p>
-                <p><strong>Valor de la métrica:</strong> 114.17073170731707</p>
-            </div>
-        </div>
-        
-        <div class="player">
-            <img src="images\ashesino.png" alt="El Ashesino" class="img-fluid">
-            <div class="player-info">
-                <h3>Pericklone</h3>
-                <p><strong>Mención especial:</strong> El Ashesino</p>
-                <p><strong>Valor de la métrica:</strong> 5.487804878048781</p>
-            </div>
-        </div>
-        
-        <div class="player">
-            <img src="images\kuroko.png" alt="El Kuroko" class="img-fluid">
-            <div class="player-info">
-                <h3>Pericklone</h3>
-                <p><strong>Mención especial:</strong> El Kuroko</p>
-                <p><strong>Valor de la métrica:</strong> 3.707317073170732</p>
-            </div>
-        </div>
-        
-        <div class="player">
-            <img src="images\devastador.png" alt="El devastador de caminos oscuros" class="img-fluid">
-            <div class="player-info">
-                <h3>Pericklone</h3>
-                <p><strong>Mención especial:</strong> El devastador de caminos oscuros</p>
-                <p><strong>Valor de la métrica:</strong> 56868.12195121951</p>
-            </div>
-        </div>
-        
-        <div class="player">
-            <img src="images\muro.png" alt="El MuuUUuuro" class="img-fluid">
-            <div class="player-info">
-                <h3>Msktrueno</h3>
-                <p><strong>Mención especial:</strong> El MuuUUuuro</p>
-                <p><strong>Valor de la métrica:</strong> 58946.78048780488</p>
-            </div>
-        </div>
-        
-        <div class="player">
-            <img src="images\paracetamon.png" alt="El Paracetamón" class="img-fluid">
-            <div class="player-info">
-                <h3>Nicky2712</h3>
-                <p><strong>Mención especial:</strong> El Paracetamón</p>
-                <p><strong>Valor de la métrica:</strong> 27279.878048780487</p>
-            </div>
-        </div>
-        
-        <div class="player">
-            <img src="images\generalist.png" alt="El Jack of all trades" class="img-fluid">
-            <div class="player-info">
-                <h3>Intrinseco._</h3>
-                <p><strong>Mención especial:</strong> El Jack of all trades</p>
-                <p><strong>Valor de la métrica:</strong> 15.0</p>
-            </div>
-        </div>
-        
-        <div class="player">
-            <img src="images\specialist.png" alt="El Especialista" class="img-fluid">
-            <div class="player-info">
-                <h3>||Aten||</h3>
-                <p><strong>Mención especial:</strong> El Especialista</p>
-                <p><strong>Valor de la métrica:</strong> 19.0</p>
-            </div>
-        </div>
-        
-            </div> <!-- Fin del grid-container -->
-            
-            <!-- Tabla de Estadísticas -->
-            <div class="title" id="estadisticas">
-                <h1>Tabla de Clasificaciones</h1>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Jugador</th>
-                            <th>Puntos de Jornada</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-    
-            <tr>
-                <td>||Aten||</td>
-                <td>9</td>
-            </tr>
-        
-            <tr>
-                <td>Q-ma</td>
-                <td>5</td>
-            </tr>
-        
-            <tr>
-                <td>Intrinseco._</td>
-                <td>5</td>
-            </tr>
-        
-            <tr>
-                <td>Nicky2712</td>
-                <td>5</td>
-            </tr>
-        
-            <tr>
-                <td>Pericklone</td>
-                <td>3</td>
-            </tr>
-        
-            <tr>
-                <td>Msktrueno</td>
-                <td>3</td>
-            </tr>
-        
-                    </tbody>
-                </table>
-                
-                <!-- Tabla de Victorias Cruzadas -->
-                <div class="title">
-                    <br>
-                    <h2>Tabla de Victorias Cruzadas</h2>
-                    <table>
-                        <thead>
-                            <tr>
-    
-                <thead>
-                    <tr>
-                        <th>Jugador de fila gana a columna</th>
-                        <th>||Aten||</th><th>Intrinseco._</th><th>Q-ma</th><th>Nicky2712</th><th>Msktrueno</th><th>Pericklone</th>
-                    </tr>
-                </thead>
-                <tbody>
-    
-            <tr>
-                <td>||Aten||</td>
-        <td>0</td><td>16</td><td>16</td><td>16</td><td>18</td><td>18</td></tr>
-            <tr>
-                <td>Intrinseco._</td>
-        <td>9</td><td>0</td><td>11</td><td>13</td><td>16</td><td>14</td></tr>
-            <tr>
-                <td>Q-ma</td>
-        <td>10</td><td>12</td><td>0</td><td>15</td><td>15</td><td>14</td></tr>
-            <tr>
-                <td>Nicky2712</td>
-        <td>7</td><td>11</td><td>12</td><td>0</td><td>15</td><td>12</td></tr>
-            <tr>
-                <td>Msktrueno</td>
-        <td>5</td><td>10</td><td>8</td><td>11</td><td>0</td><td>11</td></tr>
-            <tr>
-                <td>Pericklone</td>
-        <td>8</td><td>11</td><td>10</td><td>11</td><td>14</td><td>0</td></tr>
     </div>
 
-        <!-- Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybB3vsnX9T4wzVb5p3HkLkP2R4gsE6r6bmFjlX5yW5Ed2ih9J" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-    </body>
-    </html>
-    
+    <!-- Footer -->
+    <footer id="contact" class="py-4 text-center">
+        <div class="container">
+            <p>¡Únete a nuestro Discord para más detalles! <a href="https://discord.gg/xxxxx">discord.gg/xxxxx</a></p>
+            <p>© 2025 El Hexágono | Hecho por el que tal    </p>
+        </div>
+    </footer>
+
+    <!-- Script de JavaScript para cargar las jornadas desde el archivo HTML -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const jornadasContainer = document.getElementById("jornadas-container");
+
+            // Ruta al archivo HTML externo
+            const filePath = 'orden_jornadas_temporada/actual/H_Jornadas_Temporada_Actual.html';
+
+            // Usamos Fetch para cargar el archivo HTML
+            fetch(filePath)
+                .then(response => response.text())
+                .then(data => {
+                    // Insertamos el contenido del archivo HTML en el contenedor
+                    jornadasContainer.innerHTML = data;
+                })
+                .catch(error => {
+                    console.error("Error al cargar las jornadas:", error);
+                    jornadasContainer.innerHTML = "<p>No se pudo cargar las jornadas.</p>";
+                });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+</body>
+</html>
