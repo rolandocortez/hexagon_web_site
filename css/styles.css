@@ -54,4 +54,55 @@
 
     /* Estilos para el contenedor de las jornadas */
     /* NUEVO BLOQUE V34*/
+
+    ###########  NUEVO BLOQUE V36 PARA FIJAR LAS COLUMNAS DE JUGADORES AL DESPLAZAR LA TABLA
+    /* CSS para hacer la primera columna fija */
+    /* Para las tablas que se desplazan horizontalmente */
+    .table-responsive {
+        overflow-x: auto; /* Habilita el desplazamiento horizontal */
+    }
+
+    /* Para la primera columna de la tabla (Jugadores) */
+    .table-responsive table td:first-child {
+        position: sticky;
+        left: 0;
+        background-color: #fff; /* Fondo blanco solo para la columna fija (Jugadores) */
+        z-index: 2; /* Asegura que esté por encima del resto de las celdas */
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Agrega una sombra para mayor visibilidad */
+    }
+
+    /* Para el encabezado de la tabla */
+    .table-responsive table th {
+        background-color: #6f42c1; /* Fondo morado en los encabezados */
+        color: white; /* Letras blancas en los encabezados */
+    }
+
+    /* Para las celdas del encabezado que están en la primera columna */
+    .table-responsive table th:first-child {
+        position: sticky;
+        left: 0;
+        background-color: #6f42c1; /* Mantener el fondo morado */
+        z-index: 1; /* Asegura que el encabezado quede encima de las celdas */
+    }
+    ######### FIN DE   NUEVO BLOQUE V36 PARA FIJAR LAS COLUMNAS DE JUGADORES AL DESPLAZAR LA TABLA
+
+        /* Clase personalizada para alinear la imagen y el texto en el index*/
+    .align-img-text {
+        text-align: left; /* Alinea todo a la izquierda por defecto */
+    }
+
+    /* Para pantallas pequeñas, centramos la imagen y mantenemos el texto alineado a la izquierda */
+    @media (max-width: 767px) {
+        .align-img-text img {
+            width: 100%; /* Ajustamos la imagen al 100% de su contenedor */
+            display: block; /* Aseguramos que la imagen se muestre como bloque para el centrado */
+            margin: 0 auto; /* Centramos la imagen en pantallas pequeñas */
+        }
+
+        .align-img-text p {
+            text-align: left; /* Alineamos el texto a la izquierda en pantallas pequeñas */
+        }
+    }
+
+
     

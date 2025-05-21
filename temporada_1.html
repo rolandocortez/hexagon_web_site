@@ -166,15 +166,17 @@
             
             <!-- Tabla de Estadísticas -->
             <div class="title" id="estadisticas">
+            <br>
                 <h1>Tabla de Clasificaciones</h1>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Jugador</th>
-                            <th>Puntos de Jornada</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Jugador</th>
+                                <th>Puntos de Jornada</th>
+                            </tr>
+                        </thead>
+                        <tbody>
     
             <tr>
                 <td>||Aten||</td>
@@ -208,11 +210,13 @@
         
                     </tbody>
                 </table>
-                
-                <!-- Tabla de Victorias Cruzadas -->
-                <div class="title">
-                    <br>
-                    <h2>Tabla de Victorias Cruzadas</h2>
+            </div> <!-- Cierre del div.table-responsive -->
+            
+            <!-- Tabla de Victorias Cruzadas -->
+            <div class="title">
+                <br>
+                <h2>Tabla de Victorias Cruzadas</h2>
+                <div class="table-responsive">
                     <table>
                         <thead>
                             <tr>
@@ -245,8 +249,9 @@
         <td>8</td><td>11</td><td>10</td><td>11</td><td>14</td><td>0</td></tr>
                 </tbody>
             </table>
-        </div>
+        </div> <!-- Cierre del div.table-responsive -->
     
+            <br>
             <h2>Promedios y Desviaciones Estándar por Jugador</h2>
         <div class="table-responsive">
             <table>
@@ -367,10 +372,10 @@
         
                 </tbody>
             </table>
-        </div>
+        </div> <!-- Cierre del div.table-responsive -->
     
-        <div class="title">
-        </br>
+        <div class="table-responsive mb-4">
+            </br>
             <h2>Totales por Jugador</h2>
             <table>
                 <thead>
@@ -446,11 +451,11 @@
                 <td>897573.0</td>
             </tr>
         
-            </tbody>
-        </table>
-    </div>
+                </tbody>
+            </table>
+        </div> <!-- Cierre del div.table-responsive -->
     
-            <h2>Tabla de Totales y Promedios</h2>
+        <h2>Tabla de Totales y Promedios</h2>
         <div class="table-responsive mb-4">
             <table>
                 <thead>
@@ -521,19 +526,35 @@
         
                 </tbody>
             </table>
-        </div>
+        </div> <!-- Cierre del div.table-responsive -->
     
         <div class="title">
             <h2>Gráficas de la Jornada</h2>
         </div>
-        <div class="text-center mb-4">
-            <div class="my-2">
-                <img src="temporada_1/just_combined_radar_charts/Combined_Radar_Jornada_Jornada_11.png" alt="Gráfica 1" class="img-fluid" width="100%">
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <img src="temporada_1/just_combined_radar_charts/Combined_Radar_Jornada_Jornada_11.png" alt="Gráfica 1" class="img-fluid" width="100%" id="grafico1" onclick="openImage(this)">
             </div>
-            <div class="my-2">
-                <img src="temporada_1/just_combined_radar_charts_alt/Combined_Radar_Jornada_Jornada_11_ALT.png" alt="Gráfica 2" class="img-fluid" width="100%">
+            <div class="col-md-6">
+                <img src="temporada_1/just_combined_radar_charts_alt/Combined_Radar_Jornada_Jornada_11_ALT.png" alt="Gráfica 2" class="img-fluid" width="100%" id="grafico2" onclick="openImage(this)">
             </div>
         </div>
+    
+    <script>
+        // Para ampliar la imagen al hacer doble tap (en dispositivos móviles)
+        document.getElementById("grafico1").addEventListener("dblclick", function() {
+            this.style.width = this.style.width === "100%" ? "200%" : "100%";  // Aumenta al 200% o vuelve al 100%
+        });
+        document.getElementById("grafico2").addEventListener("dblclick", function() {
+            this.style.width = this.style.width === "100%" ? "200%" : "100%";  // Aumenta al 200% o vuelve al 100%
+        });
+
+        // Función para abrir la imagen en una nueva ventana cuando se hace doble clic
+        function openImage(img) {
+            var imageUrl = img.src;
+            window.open(imageUrl, '_blank', 'width=800,height=600'); // Abre una nueva ventana con la imagen más grande
+        }
+    </script>
     
     </div>
 
