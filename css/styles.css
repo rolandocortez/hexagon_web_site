@@ -55,7 +55,7 @@
     /* Estilos para el contenedor de las jornadas */
     /* NUEVO BLOQUE V34*/
 
-    ###########  NUEVO BLOQUE V36 PARA FIJAR LAS COLUMNAS DE JUGADORES AL DESPLAZAR LA TABLA
+    /*  NUEVO BLOQUE V36 PARA FIJAR LAS COLUMNAS DE JUGADORES AL DESPLAZAR LA TABLA*/
     /* CSS para hacer la primera columna fija */
     /* Para las tablas que se desplazan horizontalmente */
     .table-responsive {
@@ -84,7 +84,7 @@
         background-color: #6f42c1; /* Mantener el fondo morado */
         z-index: 1; /* Asegura que el encabezado quede encima de las celdas */
     }
-    ######### FIN DE   NUEVO BLOQUE V36 PARA FIJAR LAS COLUMNAS DE JUGADORES AL DESPLAZAR LA TABLA
+    /* FIN DE   NUEVO BLOQUE V36 PARA FIJAR LAS COLUMNAS DE JUGADORES AL DESPLAZAR LA TABLA*/
 
         /* Clase personalizada para alinear la imagen y el texto en el index*/
     .align-img-text {
